@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const currentSlide = ref(0)
-let intervalId: ReturnType<typeof setInterval> | null = null
+let intervalId: number | null = null
 
 const slides = [
   {
