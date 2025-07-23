@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-brown: #4a3728;
+  --secondary-brown: #6b4e3d;
+  --light-brown: #8b6f47;
+  --accent-orange: #e67e22;
+  --accent-green: #27ae60;
+  --accent-red: #e74c3c;
+  --cream: #f5f5dc;
+  --white: #ffffff;
+  --dark-bg: #2c1810;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: var(--accent-orange);
+  border-color: var(--accent-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 30px;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #d35400;
+  border-color: #d35400;
+}
+
+.grass-bg {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0,20 Q10,0 20,20 Q30,0 40,20 Q50,0 60,20 Q70,0 80,20 Q90,0 100,20 L100,20 L0,20 Z" fill="%2327ae60"/></svg>');
+  background-size: 100px 20px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.section-spacing {
+  padding: 80px 0;
+}
+
+.text-primary-brown {
+  color: var(--primary-brown) !important;
+}
+
+.bg-primary-brown {
+  background-color: var(--primary-brown) !important;
+}
+
+.bg-cream {
+  background-color: var(--cream) !important;
+}
+
+.bg-dark-wood {
+  background-color: var(--dark-bg) !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
