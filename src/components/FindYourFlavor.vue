@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const flavors = [
   {
-    name: 'TERIYAKI SALTED',
+    name: 'CHEESE FLAVOR',
     price: '28.95',
     image:
       'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=300&h=400&fit=crop',
@@ -9,20 +9,12 @@ const flavors = [
     description: 'Rich teriyaki flavor with a hint of salt',
   },
   {
-    name: 'SMOKING JALAPEÑO',
+    name: 'SWEET CHILLY FLAVOR',
     price: '28.95',
     image:
       'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=300&h=400&fit=crop',
     bgColor: '#e67e22',
     description: 'Spicy jalapeño with smoky undertones',
-  },
-  {
-    name: 'GARLIC ROSEMARY',
-    price: '28.95',
-    image:
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=300&h=400&fit=crop',
-    bgColor: '#27ae60',
-    description: 'Aromatic garlic and fresh rosemary blend',
   },
 ]
 </script>
@@ -102,9 +94,7 @@ const flavors = [
 <style scoped>
 .flavor-card {
   min-height: 400px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .flavor-card:hover {

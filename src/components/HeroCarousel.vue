@@ -59,7 +59,7 @@ onUnmounted(() => {
             class="slide-bg h-100"
             :style="{
               backgroundImage: `url(${slide.image})`,
-              backgroundSize: 'contain',
+              backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }"
@@ -68,14 +68,14 @@ onUnmounted(() => {
           </div>
 
           <div
-            class="container position-absolute top-50 start-50 translate-middle text-white text-center"
+            class="container position-absolute top-50 start-50 translate-middle text-white text-left"
           >
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <h1 class="display-3 fw-bold mb-4 text-shadow">{{ slide.title }}</h1>
                 <p class="fs-5 mb-4 text-shadow">{{ slide.subtitle }}</p>
 
-                <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+                <div class="d-flex justify-content-start flex-wrap gap-3 mb-4">
                   <span
                     v-for="feature in slide.features"
                     :key="feature"
@@ -180,7 +180,7 @@ onUnmounted(() => {
 @media (max-width: 576px) {
   /* Styles for small devices and up */
   .hero-section {
-    padding: 1rem 1rem !important;
+    padding: 2rem 1rem !important;
   }
 }
 </style>

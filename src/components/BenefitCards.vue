@@ -25,7 +25,7 @@ const benefits = [
   <section class="section-spacing bg-white">
     <div class="container">
       <div class="row g-4 justify-content-center">
-        <div v-for="benefit in benefits" :key="benefit.title" class="col-lg-4 col-md-6">
+        <div v-for="benefit in benefits" :key="benefit.title" class="col-lg-4 col-md-4">
           <div class="benefit-card text-center h-100 p-4">
             <div class="icon-wrapper mb-4">
               <div class="benefit-icon">
