@@ -70,7 +70,7 @@ onUnmounted(() => {
           <div
             class="container position-absolute top-50 start-50 translate-middle text-white text-left"
           >
-            <div class="row justify-content-center">
+            <div class="row justify-content-start">
               <div class="col-lg-8">
                 <h1 class="display-3 fw-bold mb-4 text-shadow">{{ slide.title }}</h1>
                 <p class="fs-5 mb-4 text-shadow">{{ slide.subtitle }}</p>
