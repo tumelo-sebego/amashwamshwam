@@ -41,7 +41,6 @@ const flavors = [
                     :src="flavor.image"
                     :alt="flavor.name"
                     class="img-fluid rounded-3 shadow"
-                    style="max-height: 200px; object-fit: cover"
                   />
                 </div>
 
@@ -92,6 +91,13 @@ const flavors = [
   width: 100%;
   height: 200px;
   object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .product-image img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .price-tag {
