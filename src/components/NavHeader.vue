@@ -124,6 +124,10 @@ const toggleMenu = () => {
   .nav-center {
     flex-shrink: 0;
   }
+  .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+        flex-basis: auto;
+    }
 }
 
 /* Mobile styles */
@@ -141,4 +145,7 @@ const toggleMenu = () => {
     flex-basis: 100%;
   }
 }
+
+
+
 </style>
