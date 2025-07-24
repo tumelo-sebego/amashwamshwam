@@ -18,6 +18,9 @@ import FooterSection from './components/FooterSection.vue'
     <NavHeader />
     <HeroCarousel />
     <FindYourFlavor />
+    <ScrollBanner
+      :words="['HIGH PROTEIN', 'LOW FAT', 'NON GMO', 'FIBER RICH', 'NUTRIOUS', 'HEALTHY SNACK']"
+    />
     <ProductFeatures />
     <BenefitCards />
     <NutritionalBenefits />
@@ -28,5 +31,4 @@ import FooterSection from './components/FooterSection.vue'
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

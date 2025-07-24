@@ -1,41 +1,73 @@
 <template>
   <div class="scroll-banner" :style="{ maxHeight: `${maxHeight}px` }">
     <div class="scroll-content" :style="{ animationDuration: animationSpeed }">
-      <span v-for="(word, index) in extendedWords" :key="index" class="scroll-word">{{ word }}</span>
+      <span v-for="(word, index) in extendedWords" :key="index" class="scroll-word">{{
+        word
+      }}</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref } from 'vue'
 
-const props = withDefaults(defineProps<{
-  maxHeight?: number;
-  words?: string[];
-  speed?: 'slow' | 'medium' | 'fast';
-}>(), {
-  maxHeight: 50,
-  words: () => ['Hand-Crafted', 'Locally-Sourced', 'Fresh-Ingredients', 'Community-Focused', 'Sustainable-Farming'],
-  speed: 'medium',
-});
+const props = withDefaults(
+  defineProps<{
+    maxHeight?: number
+    words?: string[]
+    speed?: 'slow' | 'medium' | 'fast'
+  }>(),
+  {
+    maxHeight: 50,
+    words: () => [
+      'Hand-Crafted',
+      'Locally-Sourced',
+      'Fresh-Ingredients',
+      'Community-Focused',
+      'Sustainable-Farming',
+    ],
+    speed: 'medium',
+  }
+)
 
 const extendedWords = computed(() => {
-  const baseWords = props.words.length > 0 ? props.words : ['Hand-Crafted', 'Locally-Sourced', 'Fresh-Ingredients', 'Community-Focused', 'Sustainable-Farming'];
-  // Duplicate the words to create a seamless loop
-  return [...baseWords, ...baseWords];
-});
+  const baseWords =
+    props.words.length > 0
+      ? props.words
+      : [
+          'Hand-Crafted',
+          'Locally-Sourced',
+          'Fresh-Ingredients',
+          'Community-Focused',
+          'Sustainable-Farming',
+        ]
+  // To create a seamless loop, we repeat the words enough times to fill the banner.
+  // The animation will then scroll through one of these repeated blocks.
+  const repeatedWords = Array(20).fill(baseWords).flat()
+  return repeatedWords
+})
 
 const animationSpeed = computed(() => {
+  const wordCount = extendedWords.value.length
+  let baseDuration
+
   switch (props.speed) {
     case 'slow':
-      return '40s';
+      baseDuration = 50 // Slower speed
+      break
     case 'fast':
-      return '10s';
+      baseDuration = 10 // Faster speed
+      break
     case 'medium':
     default:
-      return '20s';
+      baseDuration = 20 // Medium speed
+      break
   }
-});
+
+  // Adjust the animation duration based on the number of words
+  const dynamicDuration = (wordCount * baseDuration) / 10
+  return `${dynamicDuration}s`
+})
 </script>
 
 <style scoped>
