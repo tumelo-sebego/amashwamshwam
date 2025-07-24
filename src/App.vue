@@ -3,7 +3,6 @@ import ScrollBanner from './components/ScrollBanner.vue'
 import NavHeader from './components/NavHeader.vue'
 import HeroCarousel from './components/HeroCarousel.vue'
 import FindYourFlavor from './components/FindYourFlavor.vue'
-import ProductFeatures from './components/ProductFeatures.vue'
 import BenefitCards from './components/BenefitCards.vue'
 import NutritionalBenefits from './components/NutritionalBenefits.vue'
 import DeliciousFood from './components/DeliciousFood.vue'
@@ -21,7 +20,6 @@ import FooterSection from './components/FooterSection.vue'
     <ScrollBanner
       :words="['HIGH PROTEIN', 'LOW FAT', 'NON GMO', 'FIBER RICH', 'NUTRIOUS', 'HEALTHY SNACK']"
     />
-    <ProductFeatures />
     <BenefitCards />
     <NutritionalBenefits />
     <DeliciousFood />
