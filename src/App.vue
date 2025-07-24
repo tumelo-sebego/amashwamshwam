@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ScrollBanner from './components/ScrollBanner.vue'
 import NavHeader from './components/NavHeader.vue'
 import HeroCarousel from './components/HeroCarousel.vue'
 import FindYourFlavor from './components/FindYourFlavor.vue'
@@ -13,6 +14,7 @@ import FooterSection from './components/FooterSection.vue'
 
 <template>
   <div>
+    <ScrollBanner :words="['CRUNCHY', 'SWAMSWAM', 'MNANDI']" />
     <NavHeader />
     <HeroCarousel />
     <FindYourFlavor />
