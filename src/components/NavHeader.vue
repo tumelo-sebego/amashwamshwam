@@ -9,7 +9,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light py-3">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img
@@ -52,7 +52,9 @@ const toggleMenu = () => {
 .navbar-brand img {
   border-radius: 50%;
 }
-
+.navbar{
+    background-color: var(--cream);
+}
 .nav-link {
   color: var(--primary-brown) !important;
   font-size: 14px;

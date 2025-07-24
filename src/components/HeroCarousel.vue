@@ -43,8 +43,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="hero-section d-flex align-items-center justify-content-center" style="padding: 0 50px;">
-    <div class="carousel-container position-relative overflow-hidden" style="border-radius: 25px; height: 600px; width: 100%;">
+  <section class="hero-section d-flex align-items-center justify-content-center">
+    <div
+      class="carousel-container position-relative overflow-hidden"
+      style="border-radius: 25px; height: 600px; width: 100%"
+    >
       <transition-group name="fade" tag="div" class="h-100">
         <div
           v-for="(slide, index) in slides"
@@ -119,7 +122,8 @@ onUnmounted(() => {
 
 <style scoped>
 .hero-section {
-  background: linear-gradient(135deg, var(--light-brown), var(--secondary-brown));
+  background: var(--cream);
+  padding: 1rem 6rem;
 }
 
 .carousel-track {
@@ -163,5 +167,20 @@ onUnmounted(() => {
 
 .transition-transform {
   transition: transform 0.8s ease-in-out;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  /* Styles for medium devices and up */
+  .hero-section {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Styles for small devices and up */
+  .hero-section {
+    padding: 1rem 1rem !important;
+  }
 }
 </style>
