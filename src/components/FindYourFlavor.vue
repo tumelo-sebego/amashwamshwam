@@ -24,26 +24,12 @@ const flavors = [
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center">
-          <h2 class="display-4 text-primary-brown mb-3">FIND YOUR FLAVOR</h2>
-          <div class="d-flex justify-content-center gap-3">
-            <button
-              class="btn btn-outline-secondary btn-sm rounded-circle"
-              style="width: 40px; height: 40px"
-            >
-              ←
-            </button>
-            <button
-              class="btn btn-outline-secondary btn-sm rounded-circle"
-              style="width: 40px; height: 40px"
-            >
-              →
-            </button>
-          </div>
+          <h2 class="display-4 text-primary-brown mb-3">PICK YOUR FLAVOR</h2>
         </div>
       </div>
 
       <div class="row justify-content-center g-4">
-        <div v-for="flavor in flavors" :key="flavor.name" class="col-lg-3 col-md-4 col-sm-6">
+        <div v-for="flavor in flavors" :key="flavor.name" class="col-lg-6 col-md-6 col-sm-12">
           <div class="flavor-card h-100 rounded-4 overflow-hidden shadow-lg position-relative">
             <div
               class="card-bg h-100 p-4 d-flex flex-column justify-content-between text-center text-white"
