@@ -32,7 +32,7 @@ const nextSlide = () => {
 }
 
 onMounted(() => {
-  intervalId = setInterval(nextSlide, 500) // Move every 0.5 seconds as requested
+  intervalId = setInterval(nextSlide, 5000) // Move every 0.5 seconds as requested
 })
 
 onUnmounted(() => {
