@@ -43,8 +43,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="hero-section position-relative overflow-hidden" style="height: 600px">
-    <div class="carousel-container position-relative h-100">
+  <section class="hero-section d-flex align-items-center justify-content-center" style="padding: 0 50px;">
+    <div class="carousel-container position-relative overflow-hidden" style="border-radius: 25px; height: 600px; width: 100%;">
       <transition-group name="fade" tag="div" class="h-100">
         <div
           v-for="(slide, index) in slides"
