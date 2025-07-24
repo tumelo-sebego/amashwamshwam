@@ -45,24 +45,20 @@ onUnmounted(() => {
 <template>
   <section class="hero-section position-relative overflow-hidden" style="height: 600px">
     <div class="carousel-container position-relative h-100">
-      <div
-        class="carousel-track d-flex h-100 transition-transform"
-        :style="{
-          transform: `translateX(-${currentSlide * 100}%)`,
-          transition: 'transform 0.8s ease-in-out',
-        }"
-      >
+      <transition-group name="fade" tag="div" class="h-100">
         <div
           v-for="(slide, index) in slides"
           :key="index"
-          class="carousel-slide flex-shrink-0 w-100 h-100 position-relative"
+          v-show="currentSlide === index"
+          class="carousel-slide w-100 h-100 position-absolute"
         >
           <div
             class="slide-bg h-100"
             :style="{
               backgroundImage: `url(${slide.image})`,
-              backgroundSize: 'cover',
+              backgroundSize: 'contain',
               backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
             }"
           >
             <div class="overlay"></div>
@@ -103,7 +99,7 @@ onUnmounted(() => {
             </div>
           </div>
         </div>
-      </div>
+      </transition-group>
     </div>
 
     <!-- Slide indicators -->
@@ -128,6 +124,16 @@ onUnmounted(() => {
 
 .carousel-track {
   width: calc(100% * 3); /* 3 slides */
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .text-shadow {
