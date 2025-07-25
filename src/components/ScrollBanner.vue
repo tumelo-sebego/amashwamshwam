@@ -76,6 +76,7 @@ const animationSpeed = computed(() => {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: 'DK Frozen Memory', sans-serif;
 }
 
 .scroll-content {
