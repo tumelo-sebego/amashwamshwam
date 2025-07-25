@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
 
+@font-face {
+  font-family: 'DK Frozen Memory'; /* This is the name you'll use in your CSS */
+  src: url('/fonts/DKFrozenMemory.woff2') format('woff2'),
+    url('/fonts/DKFrozenMemory.woff') format('woff'),
+    url('/fonts/DKFrozenMemory.ttf') format('truetype'), url('/fonts/DKFrozenMemory.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/DKFrozenMemory.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ local('DK Frozen Memory'); /* Tries to find locally installed font first */
+  font-weight: normal; /* Adjust if your font has different weights (e.g., bold, light) */
+  font-style: normal; /* Adjust if your font has italic variants */
+  font-display: swap; /* How the font is displayed while loading (learn more about this below) */
+}
 :root {
   --primary-brown: #4a3728;
   --secondary-brown: #6b4e3d;
@@ -31,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'DK Frozen Memory', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
