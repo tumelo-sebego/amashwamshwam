@@ -1,25 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 @font-face {
-  font-family: 'DK Frozen Memory Test Web'; /* This is the name you'll use in your CSS */
-  src: url('assets/fonts/dk_frozen_memory-webfont.woff2') format('woff2'),
-    url('assets/fonts/dk_frozen_memory-webfont.woff') format('woff'),
-    url('assets/fonts/dk_frozen_memory-webfont.ttf') format('truetype'),
-    url('assets/fonts/dk_frozen_memory-webfont.eot'); /* IE9 Compat Modes */
-  src: url('assets/fonts/dk_frozen_memory-webfont.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ local('DK Frozen Memory'); /* Tries to find locally installed font first */
+  font-family: 'DK Frozen Memory'; /* This is the name you'll use in your CSS */
+  src: url('./assets/fonts/dk_frozen_memory-webfont.woff2') format('woff2'),
+    url('./assets/fonts/dk_frozen_memory-webfont.woff') format('woff'),
+    url('./assets/fonts/dk_frozen_memory-webfont.ttf') format('truetype'),
+    url('./assets/fonts/dk_frozen_memory-webfont.eot'); /* IE9 Compat Modes */
+
   font-weight: normal; /* Adjust if your font has different weights (e.g., bold, light) */
   font-style: normal; /* Adjust if your font has italic variants */
   font-display: swap; /* How the font is displayed while loading (learn more about this below) */
 }
 @font-face {
-  font-family: 'Cooper Hewitt Web Test'; /* This is the name you'll use in your CSS */
-  src: url('assets/fonts/cooperhewitt-book-webfont.woff2') format('woff2'),
-    url('assets/fonts/cooperhewitt-book-webfont.woff') format('woff'),
-    url('assets/fonts/cooperhewitt-book-webfont.ttf') format('truetype'),
-    url('assets/fonts/cooperhewitt-book-webfont.eot'); /* IE9 Compat Modes */
-  src: url('assets/fonts/cooperhewitt-book-webfont.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ local('cooperhewitt-book-webfont'); /* Tries to find locally installed font first */
+  font-family: 'Cooper Hewitt'; /* This is the name you'll use in your CSS */
+  src: url('./assets/fonts/cooperhewitt-book-webfont.woff2') format('woff2'),
+    url('./assets/fonts/cooperhewitt-book-webfont.woff') format('woff'),
+    url('./assets/fonts/cooperhewitt-book-webfont.ttf') format('truetype'),
+    url('./assets/fonts/cooperhewitt-book-webfont.eot'); /* IE9 Compat Modes */
+
   font-weight: normal; /* Adjust if your font has different weights (e.g., bold, light) */
   font-style: normal; /* Adjust if your font has italic variants */
   font-display: swap; /* How the font is displayed while loading (learn more about this below) */
@@ -43,7 +41,7 @@
 }
 
 body {
-  font-family: 'Cooper Hewitt Web Test', sans-serif;
+  font-family: 'Cooper Hewitt', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: var(--white);
@@ -55,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'DK Frozen Memory Test Web', sans-serif;
+  font-family: 'DK Frozen Memory', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
