@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 @font-face {
-  font-family: 'DK Frozen Memory'; /* This is the name you'll use in your CSS */
+  font-family: 'DK Frozen Memory Test Web'; /* This is the name you'll use in your CSS */
   src: url('assets/fonts/dk_frozen_memory-webfont.woff2') format('woff2'),
     url('assets/fonts/dk_frozen_memory-webfont.woff') format('woff'),
     url('assets/fonts/dk_frozen_memory-webfont.ttf') format('truetype'),
@@ -13,7 +13,7 @@
   font-display: swap; /* How the font is displayed while loading (learn more about this below) */
 }
 @font-face {
-  font-family: 'Cooper Hewitt'; /* This is the name you'll use in your CSS */
+  font-family: 'Cooper Hewitt Web Test'; /* This is the name you'll use in your CSS */
   src: url('assets/fonts/cooperhewitt-book-webfont.woff2') format('woff2'),
     url('assets/fonts/cooperhewitt-book-webfont.woff') format('woff'),
     url('assets/fonts/cooperhewitt-book-webfont.ttf') format('truetype'),
@@ -43,7 +43,7 @@
 }
 
 body {
-  font-family: 'Cooper Hewitt', sans-serif;
+  font-family: 'Cooper Hewitt Web Test', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: var(--white);
@@ -55,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'DK Frozen Memory', sans-serif;
+  font-family: 'DK Frozen Memory Test Web', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
