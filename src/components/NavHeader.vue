@@ -21,7 +21,7 @@ const toggleMenu = () => {
         <!-- Mobile: Centered Brand -->
         <a class="navbar-brand" href="#">
           <img
-            src="../assets/images/logo.jpg"
+            src="../assets/images/logo.svg"
             alt="Wild Jerky"
             height="40"
             class="d-inline-block align-text-top me-2"
@@ -83,7 +83,7 @@ const toggleMenu = () => {
         <!-- Desktop: Centered Brand -->
         <a class="navbar-brand nav-center" href="#">
           <img
-            src="../assets/images/logo.jpg"
+            src="../assets/images/logo.svg"
             height="40"
             class="d-inline-block align-text-top me-2"
           />
@@ -131,11 +131,11 @@ const toggleMenu = () => {
 }
 
 .navbar-brand img {
-  border-radius: 50%;
+  height: 6rem;
 }
 
 .nav-link {
-  color: var(--primary-brown) !important;
+  color: #e50102 !important;
   font-size: 14px;
   letter-spacing: 0.5px;
   font-weight: 800;

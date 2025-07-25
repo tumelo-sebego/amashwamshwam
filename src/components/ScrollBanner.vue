@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-banner" :style="{ maxHeight: `${maxHeight}px` }">
+  <div class="scroll-banner" :style="{ height: `${maxHeight}px` }">
     <div class="scroll-content" :style="{ animationDuration: animationSpeed }">
       <span v-for="(word, index) in extendedWords" :key="index" class="scroll-word">{{
         word
@@ -18,7 +18,7 @@ const props = withDefaults(
     speed?: 'slow' | 'medium' | 'fast'
   }>(),
   {
-    maxHeight: 50,
+    maxHeight: 60,
     words: () => [
       'Hand-Crafted',
       'Locally-Sourced',
@@ -77,6 +77,7 @@ const animationSpeed = computed(() => {
   display: flex;
   align-items: center;
   font-family: 'DK Frozen Memory', sans-serif;
+  background-color: #e50102;
 }
 
 .scroll-content {
@@ -92,7 +93,7 @@ const animationSpeed = computed(() => {
   padding: 0 2rem;
   font-size: 1.2rem;
   white-space: nowrap;
-  color: #333;
+  color: var(--cream);
 }
 
 @keyframes scroll {
