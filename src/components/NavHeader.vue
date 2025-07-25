@@ -22,7 +22,7 @@ const toggleMenu = () => {
         <a class="navbar-brand" href="#">
           <img
             src="../assets/images/logo.svg"
-            alt="Wild Jerky"
+            alt="Amashwamshwam Logo"
             height="40"
             class="d-inline-block align-text-top me-2"
           />
@@ -69,7 +69,7 @@ const toggleMenu = () => {
         <div class="nav-left">
           <ul class="navbar-nav flex-row">
             <li class="nav-item me-3">
-              <a class="nav-link text-uppercase" href="#">Shop Jerky</a>
+              <a class="nav-link text-uppercase" href="#">Shop</a>
             </li>
             <li class="nav-item me-3">
               <a class="nav-link text-uppercase" href="#">Recipes</a>
@@ -108,7 +108,7 @@ const toggleMenu = () => {
       <!-- Mobile Menu (collapsible) -->
       <div class="collapse navbar-collapse d-lg-none" :class="{ show: isMenuOpen }">
         <ul class="navbar-nav text-center w-100 mt-3">
-          <li class="nav-item"><a class="nav-link text-uppercase" href="#">Shop Jerky</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="#">Shop</a></li>
           <li class="nav-item"><a class="nav-link text-uppercase" href="#">Recipes</a></li>
           <li class="nav-item"><a class="nav-link text-uppercase" href="#">About</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-uppercase">Reviews</a></li>
