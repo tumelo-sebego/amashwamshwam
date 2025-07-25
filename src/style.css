@@ -11,6 +11,17 @@
   font-style: normal; /* Adjust if your font has italic variants */
   font-display: swap; /* How the font is displayed while loading (learn more about this below) */
 }
+@font-face {
+  font-family: 'Cooper Hewitt'; /* This is the name you'll use in your CSS */
+  src: url('/fonts/Cooper Hewitt.woff2') format('woff2'),
+    url('/fonts/Cooper Hewitt.woff') format('woff'),
+    url('/fonts/Cooper Hewitt.ttf') format('truetype'), url('/fonts/Cooper Hewitt.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Cooper Hewitt.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ local('Cooper Hewitt'); /* Tries to find locally installed font first */
+  font-weight: normal; /* Adjust if your font has different weights (e.g., bold, light) */
+  font-style: normal; /* Adjust if your font has italic variants */
+  font-display: swap; /* How the font is displayed while loading (learn more about this below) */
+}
 :root {
   --primary-brown: #4a3728;
   --secondary-brown: #6b4e3d;
@@ -30,7 +41,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Cooper Hewitt', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: var(--white);
@@ -46,6 +57,11 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+p {
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-weight: 600;
 }
 
 .btn-primary {
