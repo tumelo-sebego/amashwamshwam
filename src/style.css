@@ -2,10 +2,11 @@
 
 @font-face {
   font-family: 'DK Frozen Memory'; /* This is the name you'll use in your CSS */
-  src: url('/fonts/DKFrozenMemory.woff2') format('woff2'),
-    url('/fonts/DKFrozenMemory.woff') format('woff'),
-    url('/fonts/DKFrozenMemory.ttf') format('truetype'), url('/fonts/DKFrozenMemory.eot'); /* IE9 Compat Modes */
-  src: url('/fonts/DKFrozenMemory.eot?#iefix') format('embedded-opentype'),
+  src: url('assets/fonts/dk_frozen_memory-webfont.woff2') format('woff2'),
+    url('assets/fonts/dk_frozen_memory-webfont.woff') format('woff'),
+    url('assets/fonts/dk_frozen_memory-webfont.ttf') format('truetype'),
+    url('assets/fonts/dk_frozen_memory-webfont.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/dk_frozen_memory-webfont.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ local('DK Frozen Memory'); /* Tries to find locally installed font first */
   font-weight: normal; /* Adjust if your font has different weights (e.g., bold, light) */
   font-style: normal; /* Adjust if your font has italic variants */
@@ -13,11 +14,12 @@
 }
 @font-face {
   font-family: 'Cooper Hewitt'; /* This is the name you'll use in your CSS */
-  src: url('/fonts/Cooper Hewitt.woff2') format('woff2'),
-    url('/fonts/Cooper Hewitt.woff') format('woff'),
-    url('/fonts/Cooper Hewitt.ttf') format('truetype'), url('/fonts/Cooper Hewitt.eot'); /* IE9 Compat Modes */
-  src: url('/fonts/Cooper Hewitt.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ local('Cooper Hewitt'); /* Tries to find locally installed font first */
+  src: url('assets/fonts/cooperhewitt-book-webfont.woff2') format('woff2'),
+    url('assets/fonts/cooperhewitt-book-webfont.woff') format('woff'),
+    url('assets/fonts/cooperhewitt-book-webfont.ttf') format('truetype'),
+    url('assets/fonts/cooperhewitt-book-webfont.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/cooperhewitt-book-webfont.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ local('cooperhewitt-book-webfont'); /* Tries to find locally installed font first */
   font-weight: normal; /* Adjust if your font has different weights (e.g., bold, light) */
   font-style: normal; /* Adjust if your font has italic variants */
   font-display: swap; /* How the font is displayed while loading (learn more about this below) */
