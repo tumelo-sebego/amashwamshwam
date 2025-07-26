@@ -135,6 +135,7 @@ const toggleMenu = () => {
 }
 
 .nav-link {
+  font-family: 'Cooper Hewitt Bold', sans-serif;
   color: #e50102 !important;
   font-size: 14px;
   letter-spacing: 0.5px;

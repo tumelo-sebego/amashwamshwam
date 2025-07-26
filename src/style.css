@@ -22,6 +22,17 @@
   font-style: normal; /* Adjust if your font has italic variants */
   font-display: swap; /* How the font is displayed while loading (learn more about this below) */
 }
+@font-face {
+  font-family: 'Cooper Hewitt Bold'; /* This is the name you'll use in your CSS */
+  src: url('./assets/fonts/cooperhewitt-semibold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/cooperhewitt-semibold-webfont.woff') format('woff'),
+    url('./assets/fonts/cooperhewitt-semibold-webfont.ttf') format('truetype'),
+    url('./assets/fonts/cooperhewitt-semibold-webfont.eot'); /* IE9 Compat Modes */
+
+  font-weight: normal; /* Adjust if your font has different weights (e.g., bold, light) */
+  font-style: normal; /* Adjust if your font has italic variants */
+  font-display: swap; /* How the font is displayed while loading (learn more about this below) */
+}
 :root {
   --primary-brown: #4a3728;
   --secondary-brown: #6b4e3d;
