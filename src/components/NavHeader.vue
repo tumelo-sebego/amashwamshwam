@@ -9,7 +9,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light py-3">
+  <nav class="navbar navbar-expand-lg navbar-light py-0">
     <div class="container nav-container">
       <!-- Mobile Header -->
       <div class="d-lg-none d-flex justify-content-between w-100 align-items-center">
@@ -131,15 +131,15 @@ const toggleMenu = () => {
 }
 
 .navbar-brand img {
-  height: 6rem;
+  height: 5rem;
 }
 
 .nav-link {
   font-family: 'Cooper Hewitt Bold', sans-serif;
   color: #e50102 !important;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  /* font-weight: 800; */
 }
 
 .nav-link:hover {

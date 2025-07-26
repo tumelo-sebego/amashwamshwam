@@ -29,7 +29,7 @@ const flavors = [
       </div>
 
       <div class="row justify-content-center g-4">
-        <div v-for="flavor in flavors" :key="flavor.name" class="col-lg-6 col-md-6 col-sm-12">
+        <div v-for="flavor in flavors" :key="flavor.name" class="col-md-4 col-sm-12">
           <div class="flavor-card h-100 rounded-4 overflow-hidden shadow-lg position-relative">
             <div
               class="card-bg h-100 p-4 d-flex flex-column justify-content-between text-center text-white"
@@ -37,11 +37,7 @@ const flavors = [
             >
               <div>
                 <div class="product-image mb-4">
-                  <img
-                    :src="flavor.image"
-                    :alt="flavor.name"
-                    class="img-fluid rounded-3 shadow"
-                  />
+                  <img :src="flavor.image" :alt="flavor.name" class="img-fluid rounded-3 shadow" />
                 </div>
 
                 <h4 class="fw-bold mb-3 text-white">{{ flavor.name }}</h4>
