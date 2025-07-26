@@ -43,6 +43,7 @@
   --cream: #f8f8f8;
   --white: #ffffff;
   --dark-bg: #2c1810;
+  --red: #e50102;
 }
 
 * {
@@ -68,6 +69,7 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  /* color: var(--red); */
 }
 
 p {
