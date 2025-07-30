@@ -79,16 +79,13 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    faceColor?: string
-    outlineColor?: string
-    iconName: string // New prop to select which icon to display
-  }>(),
-  {
-    iconName: 'smiley_face1', // Default icon
-    faceColor: '#E50102',
-    outlineColor: 'white',
-  }
-)
+withDefaults(defineProps<{
+  faceColor?: string
+  outlineColor?: string
+  iconName?: string
+}>(), {
+  faceColor: 'white',
+  outlineColor: '#E50102',
+  iconName: 'smiley_face1'
+})
 </script>

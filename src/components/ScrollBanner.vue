@@ -3,8 +3,12 @@
     <div class="scroll-content" :style="{ animationDuration: animationSpeed }">
       <div v-for="(word, index) in extendedWords" :key="index" class="scroll-item">
         <span class="scroll-word">{{ word }}</span>
-        <SmileyFace class="smiley-face" :faceColor="faceColor" :outlineColor="outlineColor"
-        "'smiley_face' + (index + 1)" = "iconName" />
+        <SmileyFace
+          :iconName="getIconName(index)"
+          class="smiley-face"
+          :faceColor="faceColor"
+          :outlineColor="outlineColor"
+        />
       </div>
     </div>
   </div>
@@ -53,6 +57,11 @@ const extendedWords = computed(() => {
   const repeatedWords = Array(20).fill(baseWords).flat()
   return repeatedWords
 })
+
+const getIconName = (index: number) => {
+  console.log(`smiley_face${(index % 4) + 1}`)
+  return `smiley_face${(index % 4) + 1}`
+}
 
 const animationSpeed = computed(() => {
   const wordCount = extendedWords.value.length
