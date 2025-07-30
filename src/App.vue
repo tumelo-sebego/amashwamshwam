@@ -15,7 +15,7 @@ import FooterSection from './components/FooterSection.vue'
   <div>
     <ScrollBanner
       :words="['CRUNCHY', 'SWAMSWAM', 'MNANDI']"
-      bannerColor="#ffd701"
+      bannerColor="#efbd07"
       textColor="red"
     />
     <NavHeader />

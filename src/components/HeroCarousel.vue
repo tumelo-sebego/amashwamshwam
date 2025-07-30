@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import chillyHeadBg from '../assets/images/chilly_head_bg.png'
+import chillySnack from '../assets/images/chlly-snack.png'
+import cheeseHeadBg from '../assets/images/cheese_head_bg.png'
+import cheeseSnack from '../assets/images/cheese-snack.png'
 
 const currentSlide = ref(0)
 let intervalId: ReturnType<typeof setInterval> | null = null
@@ -8,14 +12,14 @@ const slides = [
   {
     title: 'SAVOUR THE CHILLY ZING!',
     subtitle: 'A fiery kick of flavour in every bite, made for the bold and adventurous.',
-    image: '../assets/images/chilly_head_bg.png',
-    productImage: '../assets/images/chlly-snack.png',
+    image: chillyHeadBg,
+    productImage: chillySnack,
   },
   {
     title: 'INDULGE IN CHEESY PERFECTION!',
     subtitle: 'A rich and creamy taste that melts in your mouth, a true delight for cheese lovers.',
-    image: '../assets/images/cheese_head_bg.png',
-    productImage: '../assets/images/cheese-snack.png',
+    image: cheeseHeadBg,
+    productImage: cheeseSnack,
   },
 ]
 
@@ -64,8 +68,10 @@ onUnmounted(() => {
           >
             <div class="row justify-content-start">
               <div class="col-lg-8">
-                <h1 class="display-3 fw-bold mb-4 text-shadow">{{ slide.title }}</h1>
-                <p class="fs-5 mb-4 text-shadow">{{ slide.subtitle }}</p>
+                <div style="position: relative; z-index: 20;">
+                  <h1 class="display-3 fw-bold mb-4 text-shadow">{{ slide.title }}</h1>
+                  <p class="fs-5 mb-4 text-shadow">{{ slide.subtitle }}</p>
+                </div>
 
                 <img
                   :src="slide.productImage"
@@ -73,15 +79,30 @@ onUnmounted(() => {
                   alt="Product Image"
                   style="
                     position: absolute;
-                    bottom: -150px;
-                    right: -200px;
-                    width: 500px;
+                    bottom: -30px;
+                    right: 23rem;
+                    width: 390px;
                     height: auto;
                     z-index: 10;
+                    transform: rotate(-14deg);
                   "
                 />
 
-                <button class="btn btn-primary btn-lg px-5 py-3">ORDER NOW →</button>
+                <div style="position: relative; z-index: 20;">
+                  <button class="btn btn-primary btn-lg px-5 py-3">ORDER NOW →</button>
+
+                  <div class="mt-4">
+                    <div
+                      class="quality-badge bg-white text-primary-brown rounded-circle d-inline-flex align-items-center justify-content-center"
+                      style="width: 80px; height: 80px"
+                    >
+                      <div class="text-center">
+                        <div class="fw-bold" style="font-size: 12px">QUALITY</div>
+                        <div class="fw-bold" style="font-size: 12px">FIRST</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
