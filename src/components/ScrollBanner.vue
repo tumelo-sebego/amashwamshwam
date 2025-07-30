@@ -1,13 +1,9 @@
 <template>
   <div class="scroll-banner" :style="{ height: `${maxHeight}px` }">
     <div class="scroll-content" :style="{ animationDuration: animationSpeed }">
-      <div
-        v-for="(word, index) in extendedWords"
-        :key="index"
-        class="scroll-item"
-      >
+      <div v-for="(word, index) in extendedWords" :key="index" class="scroll-item">
         <span class="scroll-word">{{ word }}</span>
-        <SmileyFace class="smiley-face" faceColor="#E50102" outlineColor="white" />
+        <SmileyFace class="smiley-face" :faceColor="faceColor" :outlineColor="outlineColor" />
       </div>
     </div>
   </div>
@@ -22,6 +18,8 @@ const props = withDefaults(
     maxHeight?: number
     words?: string[]
     speed?: 'slow' | 'medium' | 'fast'
+    faceColor?: string
+    outlineColor?: string
   }>(),
   {
     maxHeight: 60,
@@ -33,6 +31,8 @@ const props = withDefaults(
       'Sustainable-Farming',
     ],
     speed: 'medium',
+    faceColor: 'white',
+    outlineColor: '#E50102',
   }
 )
 
@@ -109,8 +109,8 @@ const animationSpeed = computed(() => {
 }
 
 .smiley-face {
-  width: 26px;
-  height: 26px;
+  width: 46px;
+  height: 46px;
 }
 
 @keyframes scroll {
