@@ -91,7 +91,7 @@ onUnmounted(() => {
 }
 
 .hero-image {
-  width: 100%;
+  width: 105%;
   height: 100%;
   object-fit: cover; /* This will make the image fill the container */
 }
