@@ -1,25 +1,21 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import chillyHeadBg from '../assets/images/chilly_head_bg.png'
-import chillySnack from '../assets/images/chlly-snack.png'
-import cheeseHeadBg from '../assets/images/cheese_head_bg.png'
-import cheeseSnack from '../assets/images/cheese-snack.png'
+import cheeseHero from '../assets/images/cheese_hero.jpg'
+import chillyHero from '../assets/images/chilli_hero.jpg'
+import cheeseHeroMobile from '../assets/images/cheese_hero_mobile.jpg'
+import chilliHeroMobile from '../assets/images/chilli_hero_mobile.jpg'
 
 const currentSlide = ref(0)
 let intervalId: ReturnType<typeof setInterval> | null = null
 
 const slides = [
   {
-    title: 'SAVOUR THE CHILLY ZING!',
-    subtitle: 'A fiery kick of flavour in every bite, made for the bold and adventurous.',
-    image: chillyHeadBg,
-    productImage: chillySnack,
+    desktop: chillyHero,
+    mobile: chilliHeroMobile,
   },
   {
-    title: 'INDULGE IN CHEESY PERFECTION!',
-    subtitle: 'A rich and creamy taste that melts in your mouth, a true delight for cheese lovers.',
-    image: cheeseHeadBg,
-    productImage: cheeseSnack,
+    desktop: cheeseHero,
+    mobile: cheeseHeroMobile,
   },
 ]
 
@@ -39,100 +35,65 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="hero-section d-flex align-items-center justify-content-center">
-    <div
-      class="carousel-container position-relative overflow-hidden"
-      style="border-radius: 25px; height: 600px; width: 100%"
-    >
+  <section class="hero-section">
+    <div class="carousel-container">
       <transition-group name="fade" tag="div" class="h-100">
         <div
           v-for="(slide, index) in slides"
           :key="index"
           v-show="currentSlide === index"
-          class="carousel-slide w-100 h-100 position-absolute"
+          class="carousel-slide"
         >
-          <div
-            class="slide-bg h-100"
-            :style="{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }"
-          >
-            <div class="overlay"></div>
-          </div>
-
-          <div
-            class="container position-absolute top-50 start-50 translate-middle text-white text-left"
-          >
-            <div class="row justify-content-start">
-              <div class="col-lg-8">
-                <div style="position: relative; z-index: 20;">
-                  <h1 class="display-3 fw-bold mb-4 text-shadow">{{ slide.title }}</h1>
-                  <p class="fs-5 mb-4 text-shadow">{{ slide.subtitle }}</p>
-                </div>
-
-                <img
-                  :src="slide.productImage"
-                  class="product-image"
-                  alt="Product Image"
-                  style="
-                    position: absolute;
-                    bottom: -30px;
-                    right: 23rem;
-                    width: 390px;
-                    height: auto;
-                    z-index: 10;
-                    transform: rotate(-14deg);
-                  "
-                />
-
-                <div style="position: relative; z-index: 20;">
-                  <button class="btn btn-primary btn-lg px-5 py-3">ORDER NOW →</button>
-
-                  <div class="mt-4">
-                    <div
-                      class="quality-badge bg-white text-primary-brown rounded-circle d-inline-flex align-items-center justify-content-center"
-                      style="width: 80px; height: 80px"
-                    >
-                      <div class="text-center">
-                        <div class="fw-bold" style="font-size: 12px">QUALITY</div>
-                        <div class="fw-bold" style="font-size: 12px">FIRST</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <picture>
+            <source :srcset="slide.mobile" media="(max-width: 768px)" />
+            <source :srcset="slide.desktop" media="(min-width: 769px)" />
+            <img :src="slide.desktop" alt="Hero Image" class="hero-image" />
+          </picture>
         </div>
       </transition-group>
     </div>
-
     <!-- Slide indicators -->
-    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
-      <div class="d-flex gap-2">
-        <button
-          v-for="(slide, index) in slides"
-          :key="index"
-          class="carousel-indicator"
-          :class="{ active: currentSlide === index }"
-          @click="currentSlide = index"
-        ></button>
-      </div>
+    <div class="carousel-indicators">
+      <button
+        v-for="(slide, index) in slides"
+        :key="index"
+        class="carousel-indicator"
+        :class="{ active: currentSlide === index }"
+        @click="currentSlide = index"
+      ></button>
     </div>
   </section>
 </template>
 
 <style scoped>
 .hero-section {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Or adjust as needed */
   background: var(--cream);
   padding: 1rem 6rem;
 }
 
-.carousel-track {
-  width: calc(100% * 2); /* 2 slides */
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will make the image fill the container */
 }
 
 .fade-enter-active,
@@ -145,12 +106,14 @@ onUnmounted(() => {
   opacity: 0;
 }
 
-.text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.quality-badge {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
 }
 
 .carousel-indicator {
@@ -160,32 +123,24 @@ onUnmounted(() => {
   border: 2px solid white;
   background: transparent;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .carousel-indicator.active {
   background: white;
 }
 
-.carousel-indicator:hover {
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.transition-transform {
-  transition: transform 0.8s ease-in-out;
-}
-
-/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-  /* Styles for medium devices and up */
   .hero-section {
     padding: 1rem 3rem;
+    height: 400px;
   }
 }
 
 @media (max-width: 576px) {
-  /* Styles for small devices and up */
   .hero-section {
     padding: 2rem 1rem !important;
+    height: 33rem;
   }
 }
 </style>
