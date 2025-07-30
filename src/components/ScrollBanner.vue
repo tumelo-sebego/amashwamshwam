@@ -1,8 +1,8 @@
 <template>
-  <div class="scroll-banner" :style="{ height: `${maxHeight}px` }">
+  <div class="scroll-banner" :style="{ height: `${maxHeight}px`, backgroundColor: bannerColor }">
     <div class="scroll-content" :style="{ animationDuration: animationSpeed }">
       <div v-for="(word, index) in extendedWords" :key="index" class="scroll-item">
-        <span class="scroll-word">{{ word }}</span>
+        <span class="scroll-word" :style="{ color: textColor }">{{ word }}</span>
         <SmileyFace
           :iconName="getIconName(index)"
           class="smiley-face"
@@ -25,6 +25,8 @@ const props = withDefaults(
     speed?: 'slow' | 'medium' | 'fast'
     faceColor?: string
     outlineColor?: string
+    bannerColor?: string
+    textColor?: string
   }>(),
   {
     maxHeight: 60,
@@ -38,6 +40,8 @@ const props = withDefaults(
     speed: 'medium',
     faceColor: 'red',
     outlineColor: 'white',
+    bannerColor: '#E50102',
+    textColor: 'var(--cream)',
   }
 )
 
