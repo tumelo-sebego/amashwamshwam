@@ -1,15 +1,21 @@
 <template>
   <div class="scroll-banner" :style="{ height: `${maxHeight}px` }">
     <div class="scroll-content" :style="{ animationDuration: animationSpeed }">
-      <span v-for="(word, index) in extendedWords" :key="index" class="scroll-word">{{
-        word
-      }}</span>
+      <div
+        v-for="(word, index) in extendedWords"
+        :key="index"
+        class="scroll-item"
+      >
+        <span class="scroll-word">{{ word }}</span>
+        <SmileyFace class="smiley-face" faceColor="#E50102" outlineColor="white" />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
+import SmileyFace from './icons/SmileyFace.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -89,11 +95,22 @@ const animationSpeed = computed(() => {
   min-width: 100%;
 }
 
-.scroll-word {
+.scroll-item {
+  display: flex;
+  align-items: center;
   padding: 0 2rem;
+}
+
+.scroll-word {
   font-size: 1.2rem;
   white-space: nowrap;
   color: var(--cream);
+  margin-right: 1rem; /* Add some space between the word and the smiley face */
+}
+
+.smiley-face {
+  width: 26px;
+  height: 26px;
 }
 
 @keyframes scroll {
