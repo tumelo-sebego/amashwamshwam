@@ -3,7 +3,8 @@
     <div class="scroll-content" :style="{ animationDuration: animationSpeed }">
       <div v-for="(word, index) in extendedWords" :key="index" class="scroll-item">
         <span class="scroll-word">{{ word }}</span>
-        <SmileyFace class="smiley-face" :faceColor="faceColor" :outlineColor="outlineColor" />
+        <SmileyFace class="smiley-face" :faceColor="faceColor" :outlineColor="outlineColor"
+        "'smiley_face' + (index + 1)" = "iconName" />
       </div>
     </div>
   </div>
