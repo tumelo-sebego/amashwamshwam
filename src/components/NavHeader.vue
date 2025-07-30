@@ -135,9 +135,9 @@ const toggleMenu = () => {
 }
 
 .nav-link {
-  font-family: 'Cooper Hewitt Bold', sans-serif;
+  font-family: 'DK Frozen Memory', sans-serif;
   color: #e50102 !important;
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
   /* font-weight: 800; */
 }

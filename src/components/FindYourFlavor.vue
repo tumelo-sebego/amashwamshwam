@@ -34,7 +34,7 @@ const flavors = [
 
       <div class="row justify-content-center g-4">
         <div v-for="flavor in flavors" :key="flavor.name" class="col-md-3 col-sm-12">
-          <div class="flavor-card h-100 rounded-4 overflow-hidden shadow-lg">
+          <div class="flavor-card rounded-4 overflow-hidden shadow-lg">
             <div class="flavor-image-container">
               <img :src="flavor.image" :alt="flavor.name" class="img-fluid" />
             </div>
@@ -65,6 +65,9 @@ const flavors = [
 
 .title {
   color: #e50102;
+}
+.flavor-card {
+  cursor: pointer;
 }
 .flavor-card:hover {
   transform: translateY(-10px);
