@@ -36,8 +36,8 @@ const props = withDefaults(
       'Sustainable-Farming',
     ],
     speed: 'medium',
-    faceColor: 'white',
-    outlineColor: '#E50102',
+    faceColor: 'red',
+    outlineColor: 'white',
   }
 )
 
@@ -59,7 +59,6 @@ const extendedWords = computed(() => {
 })
 
 const getIconName = (index: number) => {
-  console.log(`smiley_face${(index % 4) + 1}`)
   return `smiley_face${(index % 4) + 1}`
 }
 
