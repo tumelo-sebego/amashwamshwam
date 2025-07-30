@@ -6,24 +6,16 @@ let intervalId: ReturnType<typeof setInterval> | null = null
 
 const slides = [
   {
-    title: "HIGH PROTEIN SNACK YOU'VE EVER TASTED!",
-    subtitle: 'Enjoy the taste of victory meat jerky that comes with a friend in your pocket',
-    image: 'https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?w=800&h=600&fit=crop',
-    features: ['GRASS FED', 'HIGH PROTEIN', 'LOW FAT'],
+    title: 'SAVOUR THE CHILLY ZING!',
+    subtitle: 'A fiery kick of flavour in every bite, made for the bold and adventurous.',
+    image: '../assets/images/chilly_head_bg.png',
+    productImage: '../assets/images/chlly-snack.png',
   },
   {
-    title: 'PREMIUM QUALITY JERKY FOR REAL TASTE!',
-    subtitle: 'Made from the finest cuts of grass-fed beef with no artificial preservatives',
-    image:
-      'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?w=800&h=600&fit=crop',
-    features: ['ALL NATURAL', 'NO MSG', 'GLUTEN FREE'],
-  },
-  {
-    title: 'ADVENTURE AWAITS WITH EVERY BITE!',
-    subtitle: 'Fuel your adventures with our high-protein, low-fat jerky snacks',
-    image:
-      'https://images.pexels.com/photos/1128431/pexels-photo-1128431.jpeg?w=800&h=600&fit=crop',
-    features: ['PORTABLE', 'LONG LASTING', 'NUTRITIOUS'],
+    title: 'INDULGE IN CHEESY PERFECTION!',
+    subtitle: 'A rich and creamy taste that melts in your mouth, a true delight for cheese lovers.',
+    image: '../assets/images/cheese_head_bg.png',
+    productImage: '../assets/images/cheese-snack.png',
   },
 ]
 
@@ -32,7 +24,7 @@ const nextSlide = () => {
 }
 
 onMounted(() => {
-  intervalId = setInterval(nextSlide, 5000) // Move every 0.5 seconds as requested
+  intervalId = setInterval(nextSlide, 5000) // Move every 5 seconds
 })
 
 onUnmounted(() => {
@@ -75,29 +67,21 @@ onUnmounted(() => {
                 <h1 class="display-3 fw-bold mb-4 text-shadow">{{ slide.title }}</h1>
                 <p class="fs-5 mb-4 text-shadow">{{ slide.subtitle }}</p>
 
-                <div class="d-flex justify-content-start flex-wrap gap-3 mb-4">
-                  <span
-                    v-for="feature in slide.features"
-                    :key="feature"
-                    class="badge bg-primary fs-6 px-3 py-2 rounded-pill"
-                  >
-                    {{ feature }}
-                  </span>
-                </div>
+                <img
+                  :src="slide.productImage"
+                  class="product-image"
+                  alt="Product Image"
+                  style="
+                    position: absolute;
+                    bottom: -150px;
+                    right: -200px;
+                    width: 500px;
+                    height: auto;
+                    z-index: 10;
+                  "
+                />
 
                 <button class="btn btn-primary btn-lg px-5 py-3">ORDER NOW →</button>
-
-                <div class="mt-4">
-                  <div
-                    class="quality-badge bg-white text-primary-brown rounded-circle d-inline-flex align-items-center justify-content-center"
-                    style="width: 80px; height: 80px"
-                  >
-                    <div class="text-center">
-                      <div class="fw-bold" style="font-size: 12px">QUALITY</div>
-                      <div class="fw-bold" style="font-size: 12px">FIRST</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -127,7 +111,7 @@ onUnmounted(() => {
 }
 
 .carousel-track {
-  width: calc(100% * 3); /* 3 slides */
+  width: calc(100% * 2); /* 2 slides */
 }
 
 .fade-enter-active,
