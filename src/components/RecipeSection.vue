@@ -1,20 +1,30 @@
 <template>
   <section class="recipe-section bg-cream">
     <div class="container">
+      <div class="d-md-none text-justify-center">
+        <h4 class="display-4 mb-3 title">Mix and Match Recipe</h4>
+        <p>
+          Unleash your inner chef with our versatile beef jerky. Crumble it over salads, toss it in
+          stir-fries, or add it to your favorite trail mix for a protein-packed crunch. The
+          possibilities are as endless as your imagination.
+        </p>
+      </div>
       <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-5 mb-3">
           <div class="recipe-image-container">
             <img :src="recipeImage" alt="Recipe Image" class="recipe-image" />
           </div>
         </div>
         <div class="col-md-4">
           <div class="recipe-content">
-            <h4 class="display-4 mb-3 title">Mix and Match Recipe</h4>
-            <p>
-              Unleash your inner chef with our versatile beef jerky. Crumble it over salads, toss it
-              in stir-fries, or add it to your favorite trail mix for a protein-packed crunch. The
-              possibilities are as endless as your imagination.
-            </p>
+            <div class="d-none d-md-block">
+              <h4 class="display-4 mb-3 title">Mix and Match Recipe</h4>
+              <p>
+                Unleash your inner chef with our versatile beef jerky. Crumble it over salads, toss
+                it in stir-fries, or add it to your favorite trail mix for a protein-packed crunch.
+                The possibilities are as endless as your imagination.
+              </p>
+            </div>
             <div class="recipe-highlight">
               <p class="text-red">
                 Our jerky is the secret ingredient you never knew you needed. Elevate your everyday
@@ -47,7 +57,13 @@ import recipeImage from '../assets/images/recipe1.jpg'
 .recipe-image-container {
   border-radius: 25px;
   overflow: hidden;
-  height: 400px; /* Added a fixed height */
+  height: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .recipe-image-container {
+    height: auto;
+  }
 }
 
 .recipe-image {
@@ -56,13 +72,13 @@ import recipeImage from '../assets/images/recipe1.jpg'
   object-fit: cover;
 }
 
-.recipe-content h4 {
+.recipe-section h4 {
   font-family: 'DK Frozen Memory', sans-serif;
   color: #e50102;
   margin-bottom: 1rem;
 }
 
-.recipe-content p {
+.recipe-section p {
   font-family: 'Cooper Hewitt', sans-serif;
   color: #e50102;
   margin-bottom: 1.5rem;
