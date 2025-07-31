@@ -52,6 +52,10 @@ const benefits = [
           </div>
         </div>
       </div>
+
+      <div class="text-center mt-5">
+        <button class="btn-custom">FIND OUT MORE</button>
+      </div>
     </div>
   </section>
 </template>
@@ -59,6 +63,19 @@ const benefits = [
 <style scoped>
 .benefit-card {
   transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  /* transform: translateY(-5px); */
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .benefit-card h4 {
@@ -72,17 +89,31 @@ const benefits = [
   color: #e50102;
 }
 
-.benefit-icon {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
 .icon-wrapper {
   position: relative;
+}
+
+.btn-custom {
+  position: relative;
+  background-color: #efbd07;
+  border: 2px solid #e50102;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn-custom::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -4px;
+  width: 100%;
+  height: 100%;
+  background-color: #fde26f;
+  border: 2px solid #e50102;
+  z-index: -1;
 }
 
 @media (max-width: 767.98px) {
