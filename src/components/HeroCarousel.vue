@@ -108,6 +108,7 @@ onUnmounted(() => {
 
 .carousel-indicators {
   position: absolute;
+  justify-content: center;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);

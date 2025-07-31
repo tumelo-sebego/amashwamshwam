@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import social1 from '../assets/images/social1.jpg'
 import social2 from '../assets/images/social2.jpg'
 import social3 from '../assets/images/social3.jpg'
@@ -22,6 +22,7 @@ const socialImages = [
 ]
 
 const scrollWrapper = ref<HTMLElement | null>(null)
+const activeIndex = ref(0)
 
 const scrollLeft = () => {
   if (scrollWrapper.value) {
@@ -34,6 +35,31 @@ const scrollRight = () => {
     scrollWrapper.value.scrollBy({ left: 200, behavior: 'smooth' })
   }
 }
+
+const scrollTo = (index: number) => {
+  if (scrollWrapper.value) {
+    const card = scrollWrapper.value.children[0].children[index] as HTMLElement
+    if (card) {
+      scrollWrapper.value.scrollTo({ left: card.offsetLeft, behavior: 'smooth' })
+    }
+  }
+}
+
+const updateActiveIndex = () => {
+  if (scrollWrapper.value) {
+    const scrollLeft = scrollWrapper.value.scrollLeft
+    const cardWidth = (scrollWrapper.value.children[0].children[0] as HTMLElement).offsetWidth
+    activeIndex.value = Math.round(scrollLeft / cardWidth)
+  }
+}
+
+onMounted(() => {
+  scrollWrapper.value?.addEventListener('scroll', updateActiveIndex)
+})
+
+onBeforeUnmount(() => {
+  scrollWrapper.value?.removeEventListener('scroll', updateActiveIndex)
+})
 </script>
 
 <template>
@@ -57,13 +83,22 @@ const scrollRight = () => {
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center mt-4">
+        <div class="d-none d-md-flex justify-content-end btn-group mt-4">
           <button class="btn-white-round me-2" @click="scrollLeft">
             <IconChevronLeft />
           </button>
           <button class="btn-white-round" @click="scrollRight">
             <IconChevronRight />
           </button>
+        </div>
+        <div class="d-md-none d-flex justify-content-center mt-4">
+          <div
+            v-for="(social, index) in socialImages"
+            :key="index"
+            class="dot"
+            :class="{ active: activeIndex === index }"
+            @click="scrollTo(index)"
+          ></div>
         </div>
       </div>
     </div>
@@ -132,5 +167,23 @@ const scrollRight = () => {
   justify-content: center;
   font-size: 20px;
   cursor: pointer;
+}
+
+.btn-group {
+  position: relative;
+  right: 5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #fff;
 }
 </style>
