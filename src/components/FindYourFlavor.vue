@@ -1,25 +1,25 @@
 <script setup lang="ts">
+import chilliProduct from '../assets/images/chilli_product.jpg'
+import cheeseProduct from '../assets/images/cheese_product.jpg'
+import comboProduct from '../assets/images/combo_product.jpg'
 const flavors = [
-  {
-    name: 'CHEESE FLAVOR',
-    price: '28.95',
-    quantity: '150g',
-    image:
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=300&h=400&fit=crop',
-  },
   {
     name: 'SWEET CHILLY FLAVOR',
     price: '28.95',
     quantity: '150g',
-    image:
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=300&h=400&fit=crop',
+    image: chilliProduct,
   },
   {
-    name: 'SALT & VINEGAR',
+    name: 'CHEESE FLAVOR',
     price: '28.95',
     quantity: '150g',
-    image:
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=300&h=400&fit=crop',
+    image: cheeseProduct,
+  },
+  {
+    name: 'SNACK COMBO',
+    price: '28.95',
+    quantity: '150g',
+    image: comboProduct,
   },
 ]
 </script>
@@ -27,7 +27,7 @@ const flavors = [
 <template>
   <section class="section-spacing bg-cream">
     <div class="container">
-      <div class="flavor-container">
+      <div class="flavor-container py-5">
         <div class="row mb-5">
           <div class="col-12 text-center">
             <h2 class="display-4 mb-3 title">PICK YOUR FLAVOR</h2>
@@ -63,7 +63,6 @@ const flavors = [
 .flavor-container {
   background-color: #754bad;
   border-radius: 25px;
-  padding: 10px;
 }
 
 .flavor-card {
@@ -75,7 +74,7 @@ const flavors = [
 }
 
 .title {
-  color: #fff;
+  color: rgb(239, 189, 7);
 }
 .flavor-card {
   cursor: pointer;
@@ -121,7 +120,6 @@ const flavors = [
 
 @media (max-width: 767.98px) {
   .flavor-container {
-    padding: 1px;
     overflow-x: hidden;
   }
 
