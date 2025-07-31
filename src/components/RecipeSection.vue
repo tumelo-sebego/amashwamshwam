@@ -12,6 +12,7 @@
       <div class="row justify-content-center">
         <div class="col-md-5 mb-3">
           <div class="recipe-image-container">
+            <img :src="logoImage" alt="Logo" class="logo-overlay" />
             <img :src="recipeImage" alt="Recipe Image" class="recipe-image" />
           </div>
         </div>
@@ -44,6 +45,7 @@
 
 <script setup lang="ts">
 import recipeImage from '../assets/images/recipe1.jpg'
+import logoImage from '../assets/images/logo.svg'
 </script>
 <style scoped>
 .recipe-section {
@@ -55,9 +57,19 @@ import recipeImage from '../assets/images/recipe1.jpg'
 }
 
 .recipe-image-container {
+  position: relative;
   border-radius: 25px;
   overflow: hidden;
   height: 100%;
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: auto;
+  z-index: 1;
 }
 
 @media (max-width: 767.98px) {
