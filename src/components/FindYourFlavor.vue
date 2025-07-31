@@ -5,19 +5,22 @@ import comboProduct from '../assets/images/combo_product.jpg'
 const flavors = [
   {
     name: 'SWEET CHILLY FLAVOR',
-    price: '28.95',
+    price: '5.00',
     quantity: '150g',
+    count: 1,
     image: chilliProduct,
   },
   {
     name: 'CHEESE FLAVOR',
-    price: '28.95',
+    price: '5.00',
     quantity: '150g',
+    count: 1,
     image: cheeseProduct,
   },
   {
     name: 'SNACK COMBO',
-    price: '28.95',
+    price: '10.00',
+    count: 2,
     quantity: '150g',
     image: comboProduct,
   },
@@ -46,8 +49,9 @@ const flavors = [
                     <span class="product-name">{{ flavor.name }}</span>
                     <span class="product-price fw-bold">R{{ flavor.price }}</span>
                   </div>
-                  <div class="product-quantity text-muted">
-                    {{ flavor.quantity }}
+                  <div class="product-quantity text-muted d-flex justify-content-between">
+                    <span class="product-quantity">{{ flavor.count }} PACKET</span>
+                    <span class="product-quantity">{{ flavor.quantity }}</span>
                   </div>
                 </div>
               </div>
