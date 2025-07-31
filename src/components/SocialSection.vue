@@ -6,6 +6,7 @@ import social4 from '../assets/images/social4.jpg'
 import social5 from '../assets/images/social5.jpg'
 import social6 from '../assets/images/social6.jpg'
 import social7 from '../assets/images/social7.jpg'
+import socialBg from '../assets/images/socials_bg.png'
 
 const socialImages = [
   { image: social1 },
@@ -21,7 +22,7 @@ const socialImages = [
 <template>
   <section class="section-spacing bg-cream">
     <div class="container">
-      <div class="social-container py-5">
+      <div class="social-container py-5" :style="{ backgroundImage: `url(${socialBg})` }">
         <div class="row mb-5">
           <div class="col-12 text-center">
             <h2 class="display-4 mb-3 title">OUR SOCIALS</h2>
@@ -59,7 +60,7 @@ const socialImages = [
 }
 
 .title {
-  color: rgb(239, 189, 7);
+  color: #f8f8f8;
 }
 
 .social-card:hover {

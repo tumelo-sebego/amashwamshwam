@@ -5,6 +5,7 @@ import HeroCarousel from './components/HeroCarousel.vue'
 import FindYourFlavor from './components/FindYourFlavor.vue'
 import BenefitCards from './components/BenefitCards.vue'
 import RecipeSection from './components/RecipeSection.vue'
+import SocialSection from './components/SocialSection.vue'
 import FarmToFork from './components/FarmToFork.vue'
 import InstagramSection from './components/InstagramSection.vue'
 import FooterSection from './components/FooterSection.vue'
@@ -21,8 +22,7 @@ import FooterSection from './components/FooterSection.vue'
     />
     <BenefitCards />
     <RecipeSection />
-    <FarmToFork />
-    <InstagramSection />
+    <SocialSection />
     <FooterSection />
   </div>
 </template>
