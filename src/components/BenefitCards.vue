@@ -24,7 +24,7 @@ const benefits = [
 </script>
 
 <template>
-  <section class="section-spacing bg-white">
+  <section class="section-spacing bg-cream">
     <div class="container">
       <div class="benefit-scroll-wrapper">
         <div class="row g-4 flex-nowrap flex-md-wrap justify-content-md-center">
