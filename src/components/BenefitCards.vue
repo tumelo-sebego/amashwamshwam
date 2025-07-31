@@ -32,18 +32,22 @@ const benefits = [
             <div class="benefit-card text-center h-100 p-4">
               <div class="icon-wrapper mb-4">
                 <div class="benefit-icon">
-                  <SmileyFace :iconName="benefit.icon" outlineColor="var(--cream)" faceColor="#E50102" />
+                  <SmileyFace
+                    :iconName="benefit.icon"
+                    outlineColor="var(--cream)"
+                    faceColor="#E50102"
+                  />
                 </div>
               </div>
 
-              <h4 class="fw-bold text-primary-brown mb-2">{{ benefit.title }}</h4>
+              <h4 class="fw-bold mb-2">{{ benefit.title }}</h4>
               <div
-                class="subtitle text-uppercase fw-semibold text-muted mb-3"
+                class="subtitle text-uppercase fw-semibold mb-3"
                 style="font-size: 12px; letter-spacing: 1px"
               >
                 {{ benefit.subtitle }}
               </div>
-              <p class="text-muted">{{ benefit.description }}</p>
+              <p class="">{{ benefit.description }}</p>
             </div>
           </div>
         </div>
@@ -57,8 +61,15 @@ const benefits = [
   transition: transform 0.3s ease;
 }
 
-.benefit-card:hover {
-  transform: translateY(-5px);
+.benefit-card h4 {
+  font-family: 'Cooper Hewitt Bold', sans-serif;
+  color: #e50102;
+}
+
+.benefit-card p,
+.benefit-card .subtitle {
+  font-family: 'Cooper Hewitt', sans-serif;
+  color: #e50102;
 }
 
 .benefit-icon {
