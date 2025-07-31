@@ -1,19 +1,21 @@
 <script setup lang="ts">
+import SmileyFace from './icons/SmileyFace.vue'
+
 const benefits = [
   {
-    icon: '🌱',
+    icon: 'smiley_face2',
     title: 'SOURCED FROM GRASSLAND',
     subtitle: 'REAL FOOD',
     description: 'Our beef jerky is grass fed and grass finished.',
   },
   {
-    icon: '💪',
+    icon: 'smiley_face1',
     title: 'HIGH IN PROTEIN, BIG ON TASTE',
     subtitle: 'NUTRITIOUS',
     description: 'Packed with protein, our snacks give you real fuel.',
   },
   {
-    icon: '⭐',
+    icon: 'smiley_face3',
     title: 'BY PREMIUM JERKY COMPANY',
     subtitle: 'QUALITY',
     description: 'A tradition like jerky is worth the hard work.',
@@ -24,23 +26,25 @@ const benefits = [
 <template>
   <section class="section-spacing bg-white">
     <div class="container">
-      <div class="row g-4 justify-content-center">
-        <div v-for="benefit in benefits" :key="benefit.title" class="col-lg-4 col-md-4">
-          <div class="benefit-card text-center h-100 p-4">
-            <div class="icon-wrapper mb-4">
-              <div class="benefit-icon">
-                {{ benefit.icon }}
+      <div class="benefit-scroll-wrapper">
+        <div class="row g-4 flex-nowrap flex-md-wrap justify-content-md-center">
+          <div v-for="benefit in benefits" :key="benefit.title" class="col-10 col-md-4 col-lg-4">
+            <div class="benefit-card text-center h-100 p-4">
+              <div class="icon-wrapper mb-4">
+                <div class="benefit-icon">
+                  <SmileyFace :iconName="benefit.icon" outlineColor="var(--cream)" faceColor="#E50102" />
+                </div>
               </div>
-            </div>
 
-            <h4 class="fw-bold text-primary-brown mb-2">{{ benefit.title }}</h4>
-            <div
-              class="subtitle text-uppercase fw-semibold text-muted mb-3"
-              style="font-size: 12px; letter-spacing: 1px"
-            >
-              {{ benefit.subtitle }}
+              <h4 class="fw-bold text-primary-brown mb-2">{{ benefit.title }}</h4>
+              <div
+                class="subtitle text-uppercase fw-semibold text-muted mb-3"
+                style="font-size: 12px; letter-spacing: 1px"
+              >
+                {{ benefit.subtitle }}
+              </div>
+              <p class="text-muted">{{ benefit.description }}</p>
             </div>
-            <p class="text-muted">{{ benefit.description }}</p>
           </div>
         </div>
       </div>
@@ -60,30 +64,32 @@ const benefits = [
 .benefit-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--accent-orange), #f39c12);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
   margin: 0 auto;
-  box-shadow: 0 10px 25px rgba(231, 126, 34, 0.3);
 }
 
 .icon-wrapper {
   position: relative;
 }
 
-.icon-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  border: 2px solid rgba(231, 126, 34, 0.2);
-  border-radius: 50%;
-  z-index: -1;
+@media (max-width: 767.98px) {
+  .benefit-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .benefit-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .benefit-scroll-wrapper .row {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 </style>
