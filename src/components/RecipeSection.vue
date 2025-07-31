@@ -128,7 +128,7 @@ import logoImage from '../assets/images/logo.svg'
 
 .btn-white-round {
   background-color: white;
-  border: 1px solid #ccc;
+  border: 4px solid #e50102;
   border-radius: 50%;
   width: 40px;
   height: 40px;
