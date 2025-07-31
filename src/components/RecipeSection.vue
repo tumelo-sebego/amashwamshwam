@@ -11,9 +11,11 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-5 mb-3">
-          <div class="recipe-image-container">
+          <div class="image-wrapper">
             <img :src="logoImage" alt="Logo" class="logo-overlay" />
-            <img :src="recipeImage" alt="Recipe Image" class="recipe-image" />
+            <div class="recipe-image-container">
+              <img :src="recipeImage" alt="Recipe Image" class="recipe-image" />
+            </div>
           </div>
         </div>
         <div class="col-md-4">
@@ -56,8 +58,11 @@ import logoImage from '../assets/images/logo.svg'
   background-color: #fdf5e6;
 }
 
-.recipe-image-container {
+.image-wrapper {
   position: relative;
+}
+
+.recipe-image-container {
   border-radius: 25px;
   overflow: hidden;
   height: 100%;
@@ -65,9 +70,9 @@ import logoImage from '../assets/images/logo.svg'
 
 .logo-overlay {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 80px;
+  top: -40px;
+  left: 0rem;
+  width: 8rem;
   height: auto;
   z-index: 1;
 }
@@ -75,6 +80,15 @@ import logoImage from '../assets/images/logo.svg'
 @media (max-width: 767.98px) {
   .recipe-image-container {
     height: auto;
+  }
+
+  .logo-overlay {
+    position: absolute;
+    top: -40px;
+    left: 13rem;
+    width: 8rem;
+    height: auto;
+    z-index: 1;
   }
 }
 
