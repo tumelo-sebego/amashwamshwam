@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="row justify-content-center">
-        <div class="col-md-5 mb-3">
+        <div class="col-md-5 mb-3 mt-4">
           <div class="image-wrapper">
             <img :src="logoImage" alt="Logo" class="logo-overlay" />
             <div class="recipe-image-container">
