@@ -4,7 +4,7 @@ import NavHeader from './components/NavHeader.vue'
 import HeroCarousel from './components/HeroCarousel.vue'
 import FindYourFlavor from './components/FindYourFlavor.vue'
 import BenefitCards from './components/BenefitCards.vue'
-import NutritionalBenefits from './components/NutritionalBenefits.vue'
+import RecipeSection from './components/RecipeSection.vue'
 import DeliciousFood from './components/DeliciousFood.vue'
 import FarmToFork from './components/FarmToFork.vue'
 import InstagramSection from './components/InstagramSection.vue'
@@ -21,7 +21,7 @@ import FooterSection from './components/FooterSection.vue'
       :words="['HIGH PROTEIN', 'LOW FAT', 'NON GMO', 'FIBER RICH', 'NUTRIOUS', 'HEALTHY SNACK']"
     />
     <BenefitCards />
-    <NutritionalBenefits />
+    <RecipeSection />
     <DeliciousFood />
     <FarmToFork />
     <InstagramSection />
