@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import social1 from '../assets/images/social1.jpg'
 import social2 from '../assets/images/social2.jpg'
 import social3 from '../assets/images/social3.jpg'
@@ -7,6 +8,8 @@ import social5 from '../assets/images/social5.jpg'
 import social6 from '../assets/images/social6.jpg'
 import social7 from '../assets/images/social7.jpg'
 import socialBg from '../assets/images/socials_bg.png'
+import IconChevronLeft from './icons/IconChevronLeft.vue'
+import IconChevronRight from './icons/IconChevronRight.vue'
 
 const socialImages = [
   { image: social1 },
@@ -17,6 +20,20 @@ const socialImages = [
   { image: social6 },
   { image: social7 },
 ]
+
+const scrollWrapper = ref<HTMLElement | null>(null)
+
+const scrollLeft = () => {
+  if (scrollWrapper.value) {
+    scrollWrapper.value.scrollBy({ left: -200, behavior: 'smooth' })
+  }
+}
+
+const scrollRight = () => {
+  if (scrollWrapper.value) {
+    scrollWrapper.value.scrollBy({ left: 200, behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
@@ -29,9 +46,9 @@ const socialImages = [
           </div>
         </div>
 
-        <div class="social-scroll-wrapper">
+        <div class="social-scroll-wrapper" ref="scrollWrapper">
           <div class="row gx-4 flex-nowrap">
-            <div v-for="(social, index) in socialImages" :key="index" class="col-4 col-md-3">
+            <div v-for="(social, index) in socialImages" :key="index" class="col-10 col-md-3">
               <div class="social-card rounded-4 overflow-hidden shadow-lg">
                 <div class="social-image-container">
                   <img :src="social.image" alt="Social Image" class="img-fluid" />
@@ -39,6 +56,14 @@ const socialImages = [
               </div>
             </div>
           </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+          <button class="btn-white-round me-2" @click="scrollLeft">
+            <IconChevronLeft />
+          </button>
+          <button class="btn-white-round" @click="scrollRight">
+            <IconChevronRight />
+          </button>
         </div>
       </div>
     </div>
@@ -94,5 +119,18 @@ const socialImages = [
   padding-right: 1rem;
   margin-left: 0;
   margin-right: 0;
+}
+
+.btn-white-round {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
 }
 </style>
