@@ -110,8 +110,8 @@ onUnmounted(() => {
   position: absolute;
   justify-content: center;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   display: flex;
   gap: 10px;
   z-index: 10;
