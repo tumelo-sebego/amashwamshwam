@@ -190,6 +190,10 @@ onUnmounted(() => {
 
 /* Desktop styles */
 @media (min-width: 992px) {
+  .mobile-menu-overlay {
+    display: none;
+  }
+
   .nav-left,
   .nav-right {
     flex: 1;
@@ -240,11 +244,10 @@ onUnmounted(() => {
     left: 0;
     width: 100%;
     background-color: var(--cream);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px;
     padding: 2rem;
     transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
   }
 
   .mobile-menu-card.show {
@@ -254,7 +257,7 @@ onUnmounted(() => {
   .mobile-menu-card .navbar-nav {
     align-items: flex-start;
   }
-  
+
   .mobile-menu-card .nav-item {
     width: 100%;
     text-align: left;
