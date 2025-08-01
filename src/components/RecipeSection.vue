@@ -54,8 +54,8 @@
                 </li>
               </ul>
             </div>
-            <div class="text-center">
-              <button class="btn-custom"><span>READY TO JOIN</span></button>
+            <div class="text-center btn-container">
+              <button class="btn-custom"><span>JOIN THEN PROGRAM</span></button>
             </div>
           </div>
         </div>
@@ -111,9 +111,8 @@ import logoImage from '../assets/images/logo.svg'
     z-index: 1;
   }
 
-  .btn-custom {
-    display: flex;
-    justify-content: center;
+  .btn-container {
+    justify-content: center !important;
   }
 }
 
@@ -170,7 +169,7 @@ import logoImage from '../assets/images/logo.svg'
   cursor: pointer;
 }
 
-.btn-custom {
+.btn-container {
   display: flex;
   justify-content: start;
 }
