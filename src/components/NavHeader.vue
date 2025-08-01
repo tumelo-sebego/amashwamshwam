@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
+import IconClose from './icons/IconClose.vue'
 
 const isMenuOpen = ref(false)
 const isHidden = ref(false)
@@ -8,6 +9,14 @@ const lastScrollY = ref(0)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+
+watch(isMenuOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+})
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY
@@ -26,6 +35,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.body.style.overflow = ''
 })
 </script>
 
@@ -36,7 +46,8 @@ onUnmounted(() => {
       <div class="d-lg-none d-flex justify-content-between w-100 align-items-center">
         <!-- Mobile: Burger Menu -->
         <button class="navbar-toggler" type="button" @click="toggleMenu">
-          <span class="navbar-toggler-icon"></span>
+          <IconClose v-if="isMenuOpen" />
+          <span v-else class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Mobile: Centered Brand -->
@@ -125,10 +136,12 @@ onUnmounted(() => {
           </ul>
         </div>
       </div>
+    </div>
 
-      <!-- Mobile Menu (collapsible) -->
-      <div class="collapse navbar-collapse d-lg-none" :class="{ show: isMenuOpen }">
-        <ul class="navbar-nav text-center w-100 mt-3">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" :class="{ show: isMenuOpen }" @click.self="toggleMenu">
+      <div class="mobile-menu-card" :class="{ show: isMenuOpen }">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link text-uppercase" href="#">Shop</a></li>
           <li class="nav-item"><a class="nav-link text-uppercase" href="#">Recipes</a></li>
           <li class="nav-item"><a class="nav-link text-uppercase" href="#">About</a></li>
@@ -169,7 +182,6 @@ onUnmounted(() => {
   color: #e50102 !important;
   font-size: 1.3rem;
   letter-spacing: 1px;
-  /* font-weight: 800; */
 }
 
 .nav-link:hover {
@@ -189,10 +201,6 @@ onUnmounted(() => {
   .nav-center {
     flex-shrink: 0;
   }
-  .navbar-expand-lg .navbar-collapse {
-    display: none !important;
-    flex-basis: auto;
-  }
 }
 
 /* Mobile styles */
@@ -201,13 +209,56 @@ onUnmounted(() => {
     flex-wrap: wrap;
   }
   .navbar-brand {
-    font-size: 1.25rem; /* Adjust brand size for mobile */
+    font-size: 1.25rem;
   }
   .navbar-toggler {
     border: none;
+    z-index: 1051; /* Ensure it's above the overlay */
   }
-  .navbar-collapse {
-    flex-basis: 100%;
+
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1040;
+  }
+
+  .mobile-menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-card {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--cream);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 2rem;
+    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+  }
+
+  .mobile-menu-card.show {
+    bottom: 10px;
+  }
+
+  .mobile-menu-card .navbar-nav {
+    align-items: flex-start;
+  }
+  
+  .mobile-menu-card .nav-item {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0;
   }
 }
 </style>
