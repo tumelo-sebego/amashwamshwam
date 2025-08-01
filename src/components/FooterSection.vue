@@ -168,7 +168,9 @@ const socialLinks = [
             <div class="d-flex justify-content-md-end gap-4 mt-3 mt-md-0">
               <p class="mb-0 text-light opacity-75">
                 Designed by
-                <a href="#" class="text-light opacity-75 text-decoration-none hover-link"
+                <a
+                  href="https://tumeloGraphicStudio.netlify.app"
+                  class="text-light opacity-75 text-decoration-none hover-link"
                   >tumeloGraphicStudio</a
                 >
               </p>

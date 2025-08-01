@@ -132,6 +132,7 @@ import logoImage from '../assets/images/logo.svg'
   font-family: 'Cooper Hewitt', sans-serif;
   color: #e50102;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .recipe-highlight {
@@ -141,6 +142,7 @@ import logoImage from '../assets/images/logo.svg'
   margin-bottom: 1.5rem;
   color: #e50102;
   font-family: 'Cooper Hewitt Bold';
+  text-align: justify;
 }
 
 .recipe-highlight h5 {

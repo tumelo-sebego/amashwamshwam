@@ -1,15 +1,36 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isMenuOpen = ref(false)
+const isHidden = ref(false)
+const lastScrollY = ref(0)
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+
+const handleScroll = () => {
+  const currentScrollY = window.scrollY
+  if (lastScrollY.value < currentScrollY && currentScrollY > 100) {
+    isHidden.value = true
+  } else {
+    isHidden.value = false
+  }
+  lastScrollY.value = currentScrollY
+}
+
+onMounted(() => {
+  lastScrollY.value = window.scrollY
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light py-0">
+  <nav class="navbar navbar-expand-lg navbar-light py-0" :class="{ 'navbar-hidden': isHidden }">
     <div class="container nav-container">
       <!-- Mobile Header -->
       <div class="d-lg-none d-flex justify-content-between w-100 align-items-center">
@@ -122,6 +143,15 @@ const toggleMenu = () => {
 <style scoped>
 .navbar {
   background-color: var(--cream);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1020;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
 }
 
 .nav-container {
