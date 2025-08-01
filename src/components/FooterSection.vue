@@ -162,17 +162,16 @@ const socialLinks = [
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <p class="mb-0 text-light opacity-75">© 2025 Wild Jerky. All rights reserved.</p>
+            <p class="mb-0 text-light opacity-75">© 2025 Amashwamshwam. All rights reserved.</p>
           </div>
           <div class="col-md-6 text-md-end">
             <div class="d-flex justify-content-md-end gap-4 mt-3 mt-md-0">
-              <a href="#" class="text-light opacity-75 text-decoration-none hover-link"
-                >Privacy Policy</a
-              >
-              <a href="#" class="text-light opacity-75 text-decoration-none hover-link"
-                >Terms of Service</a
-              >
-              <a href="#" class="text-light opacity-75 text-decoration-none hover-link">Sitemap</a>
+              <p class="mb-0 text-light opacity-75">
+                Designed by
+                <a href="#" class="text-light opacity-75 text-decoration-none hover-link"
+                  >tumeloGraphicStudio</a
+                >
+              </p>
             </div>
           </div>
         </div>
