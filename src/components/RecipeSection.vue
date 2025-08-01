@@ -4,9 +4,8 @@
       <div class="d-md-none text-justify-center">
         <h4 class="display-4 mb-3 title">Mix and Match Recipe</h4>
         <p>
-          Unleash your inner chef with our versatile beef jerky. Crumble it over salads, toss it in
-          stir-fries, or add it to your favorite trail mix for a protein-packed crunch. The
-          possibilities are as endless as your imagination.
+          Start your own business with just R175. Sell AmaShwamShwam snacks and keep the profit. No
+          boss, no limits just vibes.
         </p>
       </div>
       <div class="row justify-content-center">
@@ -18,25 +17,42 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <div class="recipe-content">
             <div class="d-none d-md-block">
-              <h4 class="display-4 mb-3 title">Mix and Match Recipe</h4>
+              <h4 class="display-4 mb-3 title">Join the Movement. Become a Reseller</h4>
               <p>
-                Unleash your inner chef with our versatile beef jerky. Crumble it over salads, toss
-                it in stir-fries, or add it to your favorite trail mix for a protein-packed crunch.
-                The possibilities are as endless as your imagination.
+                Start your own business with just R175. Sell AmaShwamShwam snacks and keep the
+                profit. No boss, no limits, just vibes.
               </p>
             </div>
             <div class="recipe-highlight">
-              <p class="text-red">
-                Our jerky is the secret ingredient you never knew you needed. Elevate your everyday
-                meals with a burst of savory flavor and satisfying texture.
+              <h5 class="fw-bold">How the Program Works</h5>
+              <p>
+                The AmaShwamShwam Reseller Program is designed to help you kickstart your own
+                micro-business with minimal upfront costs and maximum flexibility.
               </p>
-            </div>
-            <div class="recipe-buttons">
-              <button class="btn-white-round">&lt;</button>
-              <button class="btn-white-round">&gt;</button>
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <strong>1. Buy a Starter Pack –</strong> Get started with just
+                  <strong>R175</strong>. Each starter pack includes <strong>60 packets</strong> of
+                  AmaShwamShwam snacks.
+                </li>
+                <li>
+                  <strong>2. Sell Anywhere –</strong> Resell the snacks in your community, at
+                  school, work, events, or even from your backpack. No shop needed, just hustle and
+                  passion.
+                </li>
+                <li>
+                  <strong>3. Keep the Profit –</strong> Sell each packet for R5–R7. You decide the
+                  price. The more you sell, the more you earn—it’s that simple.
+                </li>
+                <li>
+                  <strong>4. Get Support –</strong> Early resellers get
+                  <strong>free merch</strong> (T-shirts, caps, bags), brand exposure on our social
+                  media, and tips to help you grow your sales.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -46,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import recipeImage from '../assets/images/recipe1.jpg'
+import recipeImage from '../assets/images/member.jpg'
 import logoImage from '../assets/images/logo.svg'
 </script>
 <style scoped>
@@ -111,10 +127,16 @@ import logoImage from '../assets/images/logo.svg'
 }
 
 .recipe-highlight {
-  background-color: #fde26f;
+  background-color: #ffc801;
   border-radius: 25px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  color: #e50102;
+  font-family: 'Cooper Hewitt Bold';
+}
+
+.recipe-highlight h5 {
+  font-family: 'Cooper Hewitt Bold', sans-serif;
 }
 
 .text-red {

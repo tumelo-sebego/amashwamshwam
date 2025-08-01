@@ -4,7 +4,7 @@ import cheeseProduct from '../assets/images/cheese_product.jpg'
 import comboProduct from '../assets/images/combo_product.jpg'
 const flavors = [
   {
-    name: 'SWEET CHILLY FLAVOR',
+    name: 'SWEET CHILLI FLAVOR',
     price: '5.00',
     quantity: '150g',
     count: 1,

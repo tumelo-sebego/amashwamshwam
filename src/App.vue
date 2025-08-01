@@ -13,7 +13,7 @@ import FooterSection from './components/FooterSection.vue'
 
 <template>
   <div>
-    <ScrollBanner :words="['CRUNCHY', 'SWAMSWAM', 'MNANDI']" bannerColor="#efbd07" />
+    <ScrollBanner :words="['CRUNCHY', 'SHWAMSHWAM', 'VIBES']" bannerColor="#efbd07" />
     <NavHeader />
     <HeroCarousel />
     <FindYourFlavor />
