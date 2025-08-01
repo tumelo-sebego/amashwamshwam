@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import logoImage from '../assets/images/logo.svg'
 const footerLinks = {
   shop: ['Jerky Products', 'Gift & Rewards', 'Wild Jerky Collection'],
   help: ['Our Story', 'Tracking', 'Contact'],
@@ -13,7 +14,7 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="bg-dark-wood text-white">
+  <footer class="text-white">
     <!-- Main footer content -->
     <div class="section-spacing">
       <div class="container">
@@ -22,13 +23,7 @@ const socialLinks = [
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="footer-brand mb-4">
               <div class="d-flex align-items-center mb-3">
-                <img
-                  src="https://images.pexels.com/photos/128867/coins-currency-investment-insurance-128867.jpeg?w=50&h=50&fit=crop"
-                  alt="Wild Jerky"
-                  height="40"
-                  class="rounded-circle me-3"
-                />
-                <h4 class="fw-bold text-white mb-0">WILD JERKY</h4>
+                <img :src="logoImage" alt="Wild Jerky" height="40" class="logo me-3" />
               </div>
               <p class="text-light opacity-75 mb-4">
                 Premium quality jerky made from grass-fed beef with no artificial preservatives.
@@ -187,6 +182,10 @@ const socialLinks = [
 </template>
 
 <style scoped>
+footer {
+  background-color: rebeccapurple;
+}
+
 .hover-link {
   transition: all 0.3s ease;
 }
@@ -226,6 +225,11 @@ const socialLinks = [
 
 .footer-bottom {
   background: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 7rem;
+  height: auto;
 }
 
 @media (max-width: 768px) {
