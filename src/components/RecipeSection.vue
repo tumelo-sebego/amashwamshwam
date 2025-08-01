@@ -2,7 +2,7 @@
   <section class="recipe-section bg-cream">
     <div class="container">
       <div class="d-md-none text-justify-center">
-        <h4 class="display-4 mb-3 title">Mix and Match Recipe</h4>
+        <h4 class="display-4 mb-3 title">Join the Movement. Become a Reseller</h4>
         <p>
           Start your own business with just R175. Sell AmaShwamShwam snacks and keep the profit. No
           boss, no limits just vibes.
@@ -54,6 +54,9 @@
                 </li>
               </ul>
             </div>
+            <div class="text-center">
+              <button class="btn-custom"><span>READY TO JOIN</span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -76,6 +79,7 @@ import logoImage from '../assets/images/logo.svg'
 
 .image-wrapper {
   position: relative;
+  height: 104%;
 }
 
 .recipe-image-container {
@@ -105,6 +109,11 @@ import logoImage from '../assets/images/logo.svg'
     width: 8rem;
     height: auto;
     z-index: 1;
+  }
+
+  .btn-custom {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -159,5 +168,10 @@ import logoImage from '../assets/images/logo.svg'
   justify-content: center;
   font-size: 20px;
   cursor: pointer;
+}
+
+.btn-custom {
+  display: flex;
+  justify-content: start;
 }
 </style>

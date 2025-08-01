@@ -93,54 +93,6 @@ const benefits = [
   position: relative;
 }
 
-.btn-custom {
-  position: relative;
-  border: none;
-  font-size: 1rem;
-  font-family: 'DK Frozen Memory';
-  background: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #e50102;
-  border-radius: 13px;
-  padding: 12px;
-}
-
-.btn-custom span {
-  position: relative;
-  z-index: 2;
-  letter-spacing: 2px;
-  font-size: 20px;
-}
-
-.btn-custom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffc801;
-  /* border: inherit; */
-  border: 4px solid #e50102;
-  z-index: 1;
-  border-radius: inherit;
-}
-
-.btn-custom::after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: -8px;
-  width: 100%;
-  height: 100%;
-  background-color: #fde26f;
-  border: 4px solid #e50102;
-  z-index: 0;
-  border-radius: inherit;
-}
-
 @media (max-width: 767.98px) {
   .benefit-scroll-wrapper {
     overflow-x: auto;
