@@ -104,7 +104,7 @@ onUnmounted(() => {
               <a class="nav-link text-uppercase" href="#">Shop</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link text-uppercase" href="#">Recipes</a>
+              <a class="nav-link text-uppercase" href="#">Resell</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-uppercase" href="#">About</a>
@@ -125,9 +125,6 @@ onUnmounted(() => {
         <div class="nav-right">
           <ul class="navbar-nav flex-row">
             <li class="nav-item me-3">
-              <a href="#" class="nav-link text-uppercase">Reviews</a>
-            </li>
-            <li class="nav-item me-3">
               <a href="#" class="nav-link text-uppercase">FAQ</a>
             </li>
             <li class="nav-item">
@@ -143,9 +140,9 @@ onUnmounted(() => {
       <div class="mobile-menu-card" :class="{ show: isMenuOpen }">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link text-uppercase" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link text-uppercase" href="#">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="#">Resell</a></li>
           <li class="nav-item"><a class="nav-link text-uppercase" href="#">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-uppercase">Reviews</a></li>
+
           <li class="nav-item"><a href="#" class="nav-link text-uppercase">FAQ</a></li>
         </ul>
       </div>
