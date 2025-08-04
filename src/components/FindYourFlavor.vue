@@ -2,6 +2,7 @@
 import chilliProduct from '../assets/images/chilli_product.jpg'
 import cheeseProduct from '../assets/images/cheese_product.jpg'
 import comboProduct from '../assets/images/combo_product.jpg'
+import purpleBg from '../assets/images/purple_bg.jpg'
 const flavors = [
   {
     name: 'SWEET CHILLI FLAVOR',
@@ -30,7 +31,7 @@ const flavors = [
 <template>
   <section class="section-spacing bg-cream">
     <div class="container">
-      <div class="flavor-container py-5">
+      <div class="flavor-container py-5" :style="{ backgroundImage: `url(${purpleBg})` }">
         <div class="row mb-5">
           <div class="col-12 text-center">
             <h2 class="display-4 mb-3 title">PICK YOUR FLAVOR</h2>
@@ -67,6 +68,8 @@ const flavors = [
 .flavor-container {
   background-color: #754bad;
   border-radius: 25px;
+  background-size: cover;
+  background-position: center;
 }
 
 .flavor-card {

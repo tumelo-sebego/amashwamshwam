@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import logoImage from '../assets/images/logo.svg'
+import purpleBg from '../assets/images/purple_bg.jpg'
 const footerLinks = {
   shop: ['Jerky Products', 'Gift & Rewards', 'Wild Jerky Collection'],
   help: ['Our Story', 'Tracking', 'Contact'],
@@ -14,7 +15,7 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="text-white">
+  <footer class="text-white" :style="{ backgroundImage: `url(${purpleBg})` }">
     <!-- Main footer content -->
     <div class="section-spacing">
       <div class="container">
@@ -185,6 +186,8 @@ const socialLinks = [
 <style scoped>
 footer {
   background-color: rebeccapurple;
+  background-size: cover;
+  background-position: center;
 }
 
 .hover-link {
