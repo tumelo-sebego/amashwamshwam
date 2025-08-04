@@ -2,6 +2,7 @@
 import ScrollBanner from './components/ScrollBanner.vue'
 import NavHeader from './components/NavHeader.vue'
 import HeroCarousel from './components/HeroCarousel.vue'
+import FactualSection from './components/FactualSection.vue'
 import FindYourFlavor from './components/FindYourFlavor.vue'
 import BenefitCards from './components/BenefitCards.vue'
 import RecipeSection from './components/RecipeSection.vue'
@@ -16,6 +17,7 @@ import FooterSection from './components/FooterSection.vue'
     <ScrollBanner :words="['CRUNCHY', 'SHWAMSHWAM', 'VIBES']" bannerColor="#efbd07" />
     <NavHeader />
     <HeroCarousel />
+    <FactualSection />
     <FindYourFlavor />
     <ScrollBanner
       :words="['HIGH PROTEIN', 'LOW FAT', 'NON GMO', 'FIBER RICH', 'NUTRIOUS', 'HEALTHY SNACK']"
