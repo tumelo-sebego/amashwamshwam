@@ -4,21 +4,24 @@ import SmileyFace from './icons/SmileyFace.vue'
 const benefits = [
   {
     icon: 'smiley_face2',
-    title: 'SOURCED FROM GRASSLAND',
+    title: 'Local Roots',
     subtitle: 'REAL FOOD',
-    description: 'Our beef jerky is grass fed and grass finished.',
-  },
-  {
-    icon: 'smiley_face1',
-    title: 'HIGH IN PROTEIN, BIG ON TASTE',
-    subtitle: 'NUTRITIOUS',
-    description: 'Packed with protein, our snacks give you real fuel.',
+    description:
+      'AmaShwamShwam is more than just a snack, it’s a township tradition reborn. Our name, packaging, and flavour pay tribute to South African childhood memories. Proudly made for the people, by the people.',
   },
   {
     icon: 'smiley_face3',
-    title: 'BY PREMIUM JERKY COMPANY',
+    title: 'Built for Hustlers',
+    subtitle: 'NUTRITIOUS',
+    description:
+      'From schoolyards to street corners, AmaShwamShwam empowers youth to earn. Our reseller packs make it easy to start a side hustle with just R175. No limits, just profit, passion, and local hustle.',
+  },
+  {
+    icon: 'smiley_face1',
+    title: 'Big Flavour',
     subtitle: 'QUALITY',
-    description: 'A tradition like jerky is worth the hard work.',
+    description:
+      'Founded by Lesedi & Tsholofelo, two bold young dreamers. Their goal? Use flavour to build a movement. AmaShwamShwam is proof that youth leads change.',
   },
 ]
 </script>
@@ -32,21 +35,12 @@ const benefits = [
             <div class="benefit-card text-center h-100 p-4">
               <div class="icon-wrapper mb-4">
                 <div class="benefit-icon">
-                  <SmileyFace
-                    :iconName="benefit.icon"
-                    outlineColor="var(--cream)"
-                    faceColor="#E50102"
-                  />
+                  <SmileyFace :iconName="benefit.icon" outlineColor="#ffc801" faceColor="#E50102" />
                 </div>
               </div>
 
               <h4 class="fw-bold mb-2">{{ benefit.title }}</h4>
-              <div
-                class="subtitle text-uppercase fw-semibold mb-3"
-                style="font-size: 12px; letter-spacing: 1px"
-              >
-                {{ benefit.subtitle }}
-              </div>
+
               <p class="">{{ benefit.description }}</p>
             </div>
           </div>
@@ -87,6 +81,7 @@ const benefits = [
 .benefit-card .subtitle {
   font-family: 'Cooper Hewitt', sans-serif;
   color: #e50102;
+  text-align: justify;
 }
 
 .icon-wrapper {

@@ -65,8 +65,8 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 0;
-    padding: 0 1rem;
+    gap: 6rem;
+    padding: 0 2rem;
   }
 
   .logo-grid::-webkit-scrollbar {
