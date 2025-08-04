@@ -2,15 +2,15 @@
 import logoImage from '../assets/images/logo.svg'
 import purpleBg from '../assets/images/purple_bg.jpg'
 const footerLinks = {
-  shop: ['Jerky Products', 'Gift & Rewards', 'Wild Jerky Collection'],
+  shop: ['Products', 'Gift & Rewards'],
   help: ['Our Story', 'Tracking', 'Contact'],
   connect: ['Newsletter', 'Wholesale Inquiries', 'Join our Team'],
 }
 
 const socialLinks = [
-  { icon: 'facebook', url: '#' },
-  { icon: 'instagram', url: '#' },
-  { icon: 'twitter', url: '#' },
+  { icon: 'facebook', url: 'https://www.facebook.com/people/Amashwamshwam/100095520060449/' },
+  { icon: 'instagram', url: 'https://www.instagram.com/amashwamshwampuffs/' },
+  { icon: 'twitter', url: 'https://x.com/amashwamshwam' },
 ]
 </script>
 
@@ -27,8 +27,8 @@ const socialLinks = [
                 <img :src="logoImage" alt="Wild Jerky" height="40" class="logo me-3" />
               </div>
               <p class="text-light opacity-75 mb-4">
-                Premium quality jerky made from grass-fed beef with no artificial preservatives.
-                Fuel your adventures with our high-protein, delicious snacks.
+                Proudly South African maize snacks with bold flavour and no preservatives. Built for
+                hustlers, made to share, and rooted in kasi culture.
               </p>
 
               <!-- Newsletter signup -->
@@ -88,17 +88,17 @@ const socialLinks = [
             <div class="contact-info">
               <div class="mb-3">
                 <small class="text-light opacity-75 d-block">Phone</small>
-                <a href="tel:+1234567890" class="text-white text-decoration-none fw-semibold">
-                  +1 (234) 567-890
+                <a href="tel:+2762 713 5356" class="text-white text-decoration-none fw-semibold">
+                  +27 62 713 5356
                 </a>
               </div>
               <div class="mb-3">
                 <small class="text-light opacity-75 d-block">Email</small>
                 <a
-                  href="mailto:hello@wildjerky.com"
+                  href="mailto:info@lefelofoods.co.za"
                   class="text-white text-decoration-none fw-semibold"
                 >
-                  hello@wildjerky.com
+                  info@lefelofoods.co.za
                 </a>
               </div>
 
